@@ -1,0 +1,168 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  /* a light grey background for better contrast */
+  color: #333;
+  /* a darker text for better readability */
+  line-height: 1.5;
+  /* more line spacing for better readability */
+}
+
+/* Improve the navbar with better padding and a shadow for depth */
+.navbar {
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  /* a clean white navbar */
+}
+
+/* Flex container for main content */
+.custom-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Flex items with padding for spacing and a subtle border */
+.custom-flex-item {
+  flex: 0 0 calc(30% - 20px);
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  /* white background for the content cards */
+  padding: 15px;
+  border-radius: 8px;
+  /* rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* subtle shadow for depth */
+}
+
+/* Ensure images are responsive and have rounded corners */
+.custom-flex-item img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+  /* auto height to maintain aspect ratio */
+  margin-bottom: 15px;
+  /* space between image and text */
+}
+
+/* Photo gallery with responsive grid */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+/* Specific grid item styles for different sizes */
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  /* auto height to maintain aspect ratio */
+  border-radius: 8px;
+  /* rounded corners for images */
+}
+
+/* Card styling with hover effect */
+.card {
+  margin-bottom: 20px;
+  /* space between cards and other content */
+}
+
+.custom-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  /* subtle lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* increased shadow on hover */
+}
+
+/* Button styling with hover effect */
+.custom-card .btn-primary {
+  background-color: #0056b3;
+  /* darker blue for better contrast */
+  border-color: #0056b3;
+  /* match border color to background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-card .btn-primary:hover {
+  background-color: #003d82;
+  /* even darker on hover for effect */
+}
+
+/* Footer styling with better spacing and layout */
+footer {
+  background-color: #fff;
+  /* white background for footer */
+  padding: 40px 20px;
+  /* more padding for a spacious look */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  /* shadow for depth */
+}
+
+footer h3 {
+  margin-bottom: 20px;
+  /* space below headings */
+}
+
+footer a {
+  color: #007bff;
+  /* bootstrap primary blue for consistency */
+  text-decoration: none;
+  /* no underline */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  /* underline on hover for clarity */
+}
+
+footer p {
+  margin-bottom: 10px;
+  /* space between lines */
+}
+
+/* Back to top button styling */
+footer .btn-primary {
+  position: fixed;
+  /* make the button fixed */
+  bottom: 20px;
+  /* 20px from the bottom */
+  right: 20px;
+  /* 20px from the right */
+  border-radius: 50%;
+  /* circular shape */
+  width: 50px;
+  /* fixed width */
+  height: 50px;
+  /* fixed height */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 992px) {
+  .custom-flex-container {
+    justify-content: center;
+  }
+
+  .custom-flex-item {
+    flex: 0 0 calc(50% - 20px);
+    /* 2 items per row on medium devices */
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns on medium devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-flex-item {
+    flex: 0 0 100%;
+  }
+}
